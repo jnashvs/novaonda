@@ -4,7 +4,7 @@ namespace App\models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cliente extends Model
+class Servico extends Model
 {
 
     /**
@@ -12,7 +12,7 @@ class Cliente extends Model
      *
      * @var string
      */
-    protected $table = 'cliente';
+    protected $table = 'servico';
 
     /**
      * Attributes that should be mass-assignable.
@@ -21,10 +21,9 @@ class Cliente extends Model
      */
     protected $fillable = [
         'nome',
-        'morada',
-        'telefone',
-        'veiculo',
-        'email',
+        'tipoveiculo',
+        'descricao',
+        'valor',
         'user_id'
     ];
 

@@ -11,15 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return redirect('login');
+// Route::get('/', function () {
+//     return redirect('home');
 
-});
+// });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
+Route::get('/test', 'TestController@index');
+
 //Route::get('/companies', 'CompaniesController@index');
 
-Route::get('{path}','HomeController@index')->where( 'path', '([A-z\d-/_.]+)?' );
+//Route::get('{path}','HomeController@index')->where( 'path', '([A-z\d-/_.]+)?' );
+//Route::get('{path}','HomeController@index')->where( 'path','([A-z]+)?');
 

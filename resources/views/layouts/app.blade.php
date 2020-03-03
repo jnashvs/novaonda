@@ -24,12 +24,25 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body>
-    <div id="app">
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
+<body> 
+    <div class="container">
+        @include('layouts.top')
+    </div> 
+<header> 
+    @yield('content')
+</header>
 </body>
 
 </html>
+
+<style>
+.carousel-item {
+  height: 80vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
